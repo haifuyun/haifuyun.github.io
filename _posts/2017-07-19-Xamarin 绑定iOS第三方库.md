@@ -36,38 +36,38 @@ Objective Sharpie docs可以帮你了解怎么解析native libraries, native fra
 
 正文:步骤一: 生成ApiDefinitions.cs和StructsAndEnums.cs
 
-1. 首先获取第三方原生库,下面的例子是友盟![img](/Users/hfy/Documents/Github/Blog/assets/img//bind/umengSDk.png)
+1. 首先获取第三方原生库,下面的例子是友盟![img](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/XmarinBind/umengSDk.png)
 2. CD到当前文件夹，用下面命令会直接转换framework里面的头文件$ sharpie bind \-framework UMMobClick.framework \-sdk iphoneos10.3但是有个要注意的是，xxx.framework内部的xxx.h的头文件前缀名要和framework的前缀名一致，sharpie工具才能找到，否则它会报错找不到文件，因此要把xxx.h和xxx.framework前缀改成一致UMMobClick.framework内部会有一个Headers文件夹，里面就是我们需要的头文件
 
-A文件夹下面有个UMMobClick文件，这其实是.a静态库，我们后面需要用到, 需要添加.a文件扩展名![img](/Users/hfy/Documents/Github/Blog/assets/img//bind/headerfile.png)![img](/Users/hfy/Documents/Github/Blog/assets/img//bind/headerfile1.png)
+A文件夹下面有个UMMobClick文件，这其实是.a静态库，我们后面需要用到, 需要添加.a文件扩展名![img](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/XmarinBind/headerfile.png)![img](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/XmarinBind/headerfile1.png)
 
 但是有时framework内部不止一个头文件，并且名字不一样，上面的例子友盟就是如此，因此我们就可以用另一个命令来转换，工具还是不太智能啊！$ sharpie bind \-sdk iphoneos10.3 \/…/Headers/MobClick.h /…/Headers/MobClickGameAnalytics.h/…/Headers/MobClickSocialAnalytics.h-scope MobClick.framework/Headers \-c -F .执行后会生成ApiDefinitions.cs和StructsAndEnums.cs
 
-![img](/Users/hfy/Documents/Github/Blog/assets/img//bind/Api.png)
+![img](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/XmarinBind/Api.png)
 
 现在我们就有了三个文件: 2个cs文件, 1个.a静态库
 
-![img](/Users/hfy/Documents/Github/Blog/assets/img//bind/file.png)
+![img](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/XmarinBind/file.png)
 
 
 
 
 
-步骤二: 在Xamarin Studio新建个iOS binding project![img](/Users/hfy/Documents/Github/Blog/assets/img//bind/xamarin.png)
+步骤二: 在Xamarin Studio新建个iOS binding project![img](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/XmarinBind/xamarin.png)
 
 在项目方案中右键添加进.a静态文件
 
-![img](/Users/hfy/Documents/Github/Blog/assets/img//bind/add.png)
+![img](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/XmarinBind/add.png)
 
-添加成功后本机引用中会出现静态库文件，然后把之前生成的api和struct文件里的内容拷进项目对应的文件中覆盖![img](/Users/hfy/Documents/Github/Blog/assets/img//bind/bindproject.png)
+添加成功后本机引用中会出现静态库文件，然后把之前生成的api和struct文件里的内容拷进项目对应的文件中覆盖![img](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/XmarinBind/bindproject.png)
 
 这里需要设置下.a静态库的属性，Frameworks中是库需要用到的框架,LinkerFlags是需要用到的库，以及默认的smart link 和 force load属性
 
-![img](/Users/hfy/Documents/Github/Blog/assets/img//bind/p.png)
+![img](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/XmarinBind/p.png)
 
 然后就可以build 项目，会报错，这并不奇怪，因为api转换是命令行工具帮我们转换的，转换的文件中的一些api类型它无法确定，会添加类似的转换警告[Verify (StronglyTypedNSArray)][Verify (MethodToProperty)]需要自己确认转换类型，可以参考文档，没问题可以把这个警告删掉，重新再编译就成功了
 
-然后友盟这里需要在ApiDefiinitions.cs文件中把所有API添加进一个namespace中，否则编译时会报错，因为会生成一个SupportDelegate.cs的文件，里面会有一个没名字的namespace，包含着两个API![img](/Users/hfy/Documents/Github/Blog/assets/img//bind/error.png)
+然后友盟这里需要在ApiDefiinitions.cs文件中把所有API添加进一个namespace中，否则编译时会报错，因为会生成一个SupportDelegate.cs的文件，里面会有一个没名字的namespace，包含着两个API![img](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/XmarinBind/error.png)
 
 ApiDefiinitions.cs里的一些API会需要调用到这两个API，并且错误说明报出找不到这两个API，没名字的namespcae当然找不到啦，并且这两个方法还是在两个不同名字的namespace里，因此我们需要把这些api都添加进同一个namespcae里并且命个名，重新再编译就成功了
 
