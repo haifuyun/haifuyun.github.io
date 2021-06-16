@@ -18,7 +18,7 @@ $$
 \vec a = \overrightarrow{AB} = B - A
 $$
 
-#### ![截屏2021-06-16 下午1.16.11](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/Graphics/Linear\ Algebra/vector.png)		
+#### ![截屏2021-06-16 下午1.16.11](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/Graphics/Linear%20Algebra/vector.png)		
 
 
 
@@ -137,7 +137,7 @@ Determine **left / right**
 
 Determine **inside / outside**
 
-![crossProduct](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/Graphics/Linear\ Algebra/crossProduct.png)
+![crossProduct](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/Graphics/Linear%20Algebra/crossProduct.png)
 
 
 
