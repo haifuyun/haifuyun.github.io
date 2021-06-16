@@ -1,6 +1,6 @@
 ---
 title:  Unity shader and Compoent
-date:   2017-03-15
+date:   2018-05-04
 categories: [Graphics, Unity]
 tags: [Graphics]
 ---
