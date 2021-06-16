@@ -3,6 +3,7 @@ title:  Computer Graphics Linear Algebra
 date: 2021-06-16
 categories: [Graphics, Base]
 tags: [Graphics]
+math: true
 ---
 
 前段时间学习完成了Games101的计算机图形学入门课程作业，一直没抽时间回顾下知识点，所以以个人理解，写的精简点，用来回顾搜索。
@@ -143,6 +144,8 @@ Determine **inside / outside**
 #### Matrices
 
 Array of numbers (m × n = m rows, n columns)
+
+
 $$
 \begin{matrix}
 1 & 2  \\
@@ -150,6 +153,8 @@ $$
 7 & 8 
 \end{matrix}
 $$
+
+
 \# (number of) columns in A must = # rows in B  
 
 一个矩阵列的数量必须等于另一个矩阵行的数量
@@ -159,6 +164,8 @@ $$
 一个矩阵行的数量必须等于另一个矩阵列的数量
 
 (M x N) (N x P) = (M x P)
+
+
 $$
 \left \{
 \begin{matrix}
@@ -169,6 +176,8 @@ $$
 \right \}
 $$
 
+
+
 $$
 \left \{
 \begin{matrix}
@@ -177,6 +186,8 @@ $$
 \end{matrix}
 \right \}
 $$
+
+
 
 $$
 \left \{
@@ -187,6 +198,7 @@ $$
 \end{matrix}
 \right \}
 $$
+
 
 (3 x 2)(2 x 4) = (3 x 4)
 
@@ -206,6 +218,7 @@ A(B+C) = AB + AC
 
 #### Matrix-Vector Multiplication
 
+
 $$
 \begin{bmatrix}
 -1 & 0\\
@@ -223,9 +236,12 @@ y
 \end{bmatrix}
 $$
 
+
 #### Transpose of a Matrix
 
 Switch rows and columns
+
+
 $$
 \begin{matrix}
 1 & 2 \\
@@ -238,12 +254,18 @@ $$
 2 & 4 & 6
 \end{matrix}
 $$
+
+
 Property
+
+
 $$
 (AB)^\intercal = B^\intercal A^\intercal
 $$
 
+
 #### Identity Matrix and Inverses
+
 
 $$
 I_{3\times 3} = 
@@ -262,9 +284,13 @@ $$
 (AB)^{-1} = B^{-1}A^{-1}
 $$
 
+
+
 #### Vector multiplication in Matrix form
 
 Dot product?
+
+
 $$
 a·b = a^\intercal b = 
 \left \{
@@ -286,7 +312,11 @@ XaXb + YaYb + ZaZb \\
 \end{matrix}
 \right\}
 $$
+
+
 Cross product?
+
+
 $$
 \vec a \times \vec b = A *b = 
 \left \{
@@ -297,5 +327,7 @@ Za & 0 & -Xa & Yb \\
 \end{matrix}
 \right\}
 $$
+
+
 向量a的对偶矩阵
 
