@@ -1,7 +1,7 @@
 ---
 title:  Computer Graphics Linear Algebra
 date: 2021-06-16
-categories: [Graphics, Base]
+categories: [Graphics, Linear Algebra]
 tags: [Graphics]
 math: true
 ---
