@@ -6,6 +6,14 @@ tags: [Graphics]
 math: true
 ---
 
+资料来源：https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html
+
+---
+
+
+
+
+
 ##### What’s after MVP?
 
 **M**odel transformation (placing objects)
@@ -116,9 +124,8 @@ static bool insideTriangle(int x, int y, const Vector3f* _v)
 {   
     Eigen::Vector3f pt;
     pt << (float)x, (float)y, 0.0f;
-    bool isInside = isSameSide(pt, _v[0], _v[1], _v[2]) 
-    								&& isSameSide(pt, _v[1], _v[0], _v[2]) 
-    								&& isSameSide(pt, _v[2], _v[0], _v[1]);
+    bool isInside = isSameSide(pt, _v[0], _v[1], _v[2]) && isSameSide(pt, _v[1], _v[0], _v[2])
+      && isSameSide(pt, _v[2], _v[0], _v[1]);
     return isInside;
 
 }

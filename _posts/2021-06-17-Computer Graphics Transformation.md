@@ -6,6 +6,12 @@ tags: [Graphics]
 math: true
 ---
 
+资料来源：https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html
+
+---
+
+
+
 
 
 笛卡尔坐标系中，空间坐标的位置变换是通过矩阵相乘实现的.

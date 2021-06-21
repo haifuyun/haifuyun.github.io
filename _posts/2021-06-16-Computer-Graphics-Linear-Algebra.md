@@ -6,6 +6,14 @@ tags: [Graphics]
 math: true
 ---
 
+资料来源：https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html
+
+---
+
+
+
+
+
 前段时间学习完成了Games101的计算机图形学入门课程作业，一直没抽时间回顾下知识点，所以以个人理解，写的精简点，用来回顾搜索。
 
 

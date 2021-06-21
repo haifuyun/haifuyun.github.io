@@ -6,6 +6,14 @@ tags: [Graphics]
 math: true
 ---
 
+资料来源：https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html
+
+---
+
+
+
+
+
 #### View / Camera Transformation
 
 如何呈现一个画面？
