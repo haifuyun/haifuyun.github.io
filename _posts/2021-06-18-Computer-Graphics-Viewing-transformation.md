@@ -70,6 +70,8 @@ Rotates (g x t) To X
 Mview = RviewTview
 
 Translate e to origin
+
+
 $$
 Tview
 =
@@ -83,8 +85,8 @@ Tview
 \right ]
 $$
 
-
 Rotate g to -Z, t to Y, (g x t) To X
+
 
 
 $$

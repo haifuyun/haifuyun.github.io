@@ -136,8 +136,9 @@ y
 \right ]
 $$
 
-
 Rotation Matrix
+
+
 $$
 \left [
 \begin{matrix}
@@ -217,6 +218,8 @@ $$
 2D vector = (x, y, 0)
 
 平移的矩阵表示
+
+
 $$
 \left [
 \begin{matrix}
@@ -254,6 +257,8 @@ $$
 所以在齐次坐标下，有这些运算结果:
 
 vector + vector = vector
+
+
 $$
 \left [
 \begin{matrix}
@@ -280,8 +285,9 @@ ya+yb \\
 \right ]
 $$
 
-
 point - point = vector
+
+
 $$
 \left [
 \begin{matrix}
@@ -307,11 +313,11 @@ ya-yb \\
 \end{matrix}
 \right ]
 $$
-
 
 point + vector = point
 
 
+
 $$
 \left [
 \begin{matrix}
@@ -338,8 +344,8 @@ ya-yb \\
 \right ]
 $$
 
-
 point + point = point (两坐标中点) w = 2  w!=0
+
 
 
 $$
@@ -389,6 +395,7 @@ Affine map = linear map + translation
 仿射变换 = 线性变换 + 平移
 
 
+
 $$
 \left [
 \begin{matrix}
@@ -418,8 +425,8 @@ ty
 \right ]
 $$
 
-
 Using homogenous coordinates:
+
 
 
 $$
@@ -447,8 +454,8 @@ y\\
 \right ]
 $$
 
-
 Scale
+
 
 
 $$
@@ -465,6 +472,7 @@ $$
 Rotation
 
 
+
 $$
 R(\Theta)
 =
@@ -477,8 +485,8 @@ sin\Theta & cos\Theta & 0\\
 \right ]
 $$
 
-
 Translation
+
 
 
 $$
@@ -538,6 +546,7 @@ In general, (x, y, z, w) (w != 0) is the 3D point:
 (x/wa,y/w,z/w)
 
 
+
 $$
 \left [
 \begin{matrix}
@@ -566,8 +575,8 @@ z\\
 \right ]
 $$
 
-
 Rotation around x-, y-, or z-axis
+
 
 
 $$
@@ -619,6 +628,7 @@ $$
 所以有以下公式可以实现任意轴角度的旋转，替代上面三个不同轴的旋转矩阵
 
 Rotation by angle **α** around axis **n**
+
 
 
 $$
