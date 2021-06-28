@@ -6,7 +6,7 @@ tags: [Graphics]
 math: true
 ---
 
-
+资料来源：https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html
 
 ---
 
@@ -100,7 +100,7 @@ A pixel on a texture — a texel (纹理元素、纹素)
 
 贴图纹理的分辨率太小，没有足够的像素点对应屏幕显示的像素点
 
-当屏幕上某一个像素想要采样显示纹理的纹理元素，映射到某一个纹理的纹理元素位置内，但是纹理坐标是整数值，就会出现多个像素显示同一个纹理元素，我们可以使用插值解决这个问题.
+当屏幕上某一个像素要采样纹理的某一个像素，映射到某一个纹理元素位置内，但是纹理坐标是整数索引，就会出现多个像素索引同一个纹理像素，我们可以使用插值解决这个问题.
 
 ![5](https://raw.githubusercontent.com/haifuyun/haifuyun.github.io/main/_img/Graphics/Shading%20Texture/5.png)
 

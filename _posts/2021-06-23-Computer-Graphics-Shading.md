@@ -6,7 +6,7 @@ tags: [Graphics]
 math: true
 ---
 
-
+资料来源：https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html
 
 ---
 
