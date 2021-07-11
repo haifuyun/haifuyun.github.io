@@ -1,0 +1,633 @@
+<!DOCTYPE html><html lang="en-US" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="generator" content="Jekyll v4.2.0" /><meta property="og:title" content="Leet Code Problem" /><meta property="og:locale" content="en_US" /><meta name="description" content="Leet Code Problem" /><meta property="og:description" content="Leet Code Problem" /><link rel="canonical" href="https://hifuyun.com/haifuyun.github.io/posts/Leet-Code-Problem/" /><meta property="og:url" content="https://hifuyun.com/haifuyun.github.io/posts/Leet-Code-Problem/" /><meta property="og:site_name" content="Hi!FuYun" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2017-09-29T00:00:00+08:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Leet Code Problem" /><meta name="twitter:site" content="@haifuyun" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"headline":"Leet Code Problem","dateModified":"2017-09-29T00:00:00+08:00","datePublished":"2017-09-29T00:00:00+08:00","url":"https://hifuyun.com/haifuyun.github.io/posts/Leet-Code-Problem/","description":"Leet Code Problem","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://hifuyun.com/haifuyun.github.io/posts/Leet-Code-Problem/"},"@context":"https://schema.org"}</script><title>Leet Code Problem | Hi!FuYun</title><link rel="apple-touch-icon" sizes="180x180" href="/haifuyun.github.io/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/haifuyun.github.io/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/haifuyun.github.io/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/haifuyun.github.io/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/haifuyun.github.io/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="Hi!FuYun"><meta name="application-name" content="Hi!FuYun"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/haifuyun.github.io/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/haifuyun.github.io/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script defer src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script async src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js"></script> <script defer src="/haifuyun.github.io/assets/js/dist/post.min.js"></script> <script defer src="/haifuyun.github.io/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id="></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); }); </script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/haifuyun.github.io/" alt="avatar" class="mx-auto"> <img src="https://pbs.twimg.com/profile_images/661212370547552257/xbqo4JqZ_400x400.jpg" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="site-title mt-3"> <a href="/haifuyun.github.io/">Hi!FuYun</a></div><div class="site-subtitle font-italic">Non-class'dev</div></div><ul class="w-100"><li class="nav-item"> <a href="/haifuyun.github.io/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item"> <a href="/haifuyun.github.io/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item"> <a href="/haifuyun.github.io/tags/" class="nav-link"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item"> <a href="/haifuyun.github.io/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item"> <a href="/haifuyun.github.io/about/" class="nav-link"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center"> <a href="https://github.com/haifuyun" aria-label="github" class="order-3" target="_blank" rel="noopener"> <i class="fab fa-github-alt"></i> </a> <a href="https://twitter.com/haifuyun" aria-label="twitter" class="order-4" target="_blank" rel="noopener"> <i class="fab fa-twitter"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['example','doamin.com'].join('@')" aria-label="email" class="order-5" > <i class="fas fa-envelope"></i> </a> <a href="/haifuyun.github.io/feed.xml" aria-label="rss" class="order-6" > <i class="fas fa-rss"></i> </a> <span class="icon-border order-2"></span> <span id="mode-toggle-wrapper" class="order-1"> <i class="mode-toggle fas fa-adjust"></i> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } constructor() { if (this.hasMode) { if (this.isDarkMode) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } var self = this; /* always follow the system prefers */ this.sysDarkPrefers.addListener(function() { if (self.hasMode) { if (self.isDarkMode) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } self.updateMermaid(); }); } /* constructor() */ setDark() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_KEY); sessionStorage.removeItem(ModeToggle.MODE_KEY); } get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; } get isLightMode() { return this.mode == ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } /* get the current mode on screen */ get modeStatus() { if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer) ) { return ModeToggle.DARK_MODE; } else { return ModeToggle.LIGHT_MODE; } } updateMermaid() { if (typeof mermaid !== "undefined") { let expectedTheme = (this.modeStatus === ModeToggle.DARK_MODE? "dark" : "default"); let config = { theme: expectedTheme }; /* re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */ $(".mermaid").each(function() { let svgCode = $(this).prev().children().html(); $(this).removeAttr("data-processed"); $(this).html(svgCode); }); mermaid.initialize(config); mermaid.init(undefined, ".mermaid"); } } flipMode() { if (this.hasMode) { if (this.isSysDarkPrefer) { if (this.isLightMode) { this.clearMode(); } else { this.setLight(); } } else { if (this.isDarkMode) { this.clearMode(); } else { this.setDark(); } } } else { if (this.isSysDarkPrefer) { this.setLight(); } else { this.setDark(); } } this.updateMermaid(); } /* flipMode() */ } /* ModeToggle */ let toggle = new ModeToggle(); $(".mode-toggle").click(function() { toggle.flipMode(); }); </script> </span></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/haifuyun.github.io/"> Posts </a> </span> <span>Leet Code Problem</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>Leet Code Problem</h1><div class="post-meta text-muted d-flex flex-column"><div> <span class="semi-bold"> haifuyun </span> <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Fri, Sep 29, 2017, 12:00 AM +0800" prep="on" > Sep 29, 2017 <i class="unloaded">2017-09-29T00:00:00+08:00</i> </span></div><div> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2594 words">14 min</span></div></div><div class="post-content"><h2 id="leet-code-problem">Leet Code Problem</h2><p>412.Fizz Buzz</p><p>Write a program that outputs the string representation of numbers from 1 to n.</p><p>But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”.<br /> For numbers which are multiples of both three and five output “FizzBuzz”.</p><p>Example:</p><p>n = 15,</p><p>Return:[ “1”, “2”, “Fizz”, “4”, “Buzz”, “Fizz”, “7”, “8”, “Fizz”, “Buzz”, “11”, “Fizz”, “13”, “14”, “FizzBuzz”]</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre><td class="rouge-code"><pre>class Solution(object):
+    def fizzBuzz(self, n):
+        res = []
+        for i in range(1,n+1):
+            if (i % 3 == 0 ) and (i % 5 == 0 ):
+                res.append('FizzBuzz')
+            elif (i % 3 == 0 ):
+                res.append('Fizz')
+            elif (i % 5 == 0 ):
+                res.append('Buzz')
+            else :
+                res.append(str(i))
+
+        return  res
+</pre></table></code></div></div><hr /><p>88.Merga Sorted Array</p><p>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.</p><p>Note:You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.</p><p>The number of elements initialized in nums1 and nums2 are m and n respectively.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre><td class="rouge-code"><pre>class Solution(object):
+    def merge(self, nums1, m, nums2, n):
+        while m &gt; 0 and n &gt; 0:
+            if nums1[m-1] &lt;= nums2[n-1]: 
+            	nums1[m+n-1] = nums2[n-1] 
+            	n-=1 
+            else: 
+            	m-=1 
+            
+            if n&gt; 0:
+            nums1[:n] = nums2[:n]
+</pre></table></code></div></div><hr /><ol><li>First Missing Positive</ol><p>Given an unsorted integer array, find the first missing positive integer.</p><p>For example,</p><p>Given [1,2,0] return 3,</p><p>and [3,4,-1,1] return 2.</p><p>Your algorithm should run in O(n) time and uses constant space.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre><td class="rouge-code"><pre>class Solution(object):
+    def firstMissingPositive(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        for i in range(len(nums)):
+            if i + 1 not in nums:
+                return  i + 1
+
+        return len(nums) + 1
+</pre></table></code></div></div><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre><td class="rouge-code"><pre>class Solution(object):
+    def firstMissingPositive(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        i = 0
+
+        while i &lt; len(nums):
+            if nums[i] != i + 1 and nums[i] &lt; len(nums) and nums[i] &gt; 0 and nums[i] != nums[nums[i] - 1]:
+                temp = nums[i]
+                nums[i] = nums[temp - 1]
+                nums[temp - 1] = temp
+            else:
+                i += 1
+
+        i = 0
+        for i in range(len(nums)):
+            if nums[i] != i + 1:
+                return i + 1
+
+        return len(nums) + 1
+</pre></table></code></div></div><hr /><ol><li>Reverse Linked List</ol><p>Reverse a singly linked list.</p><p>Hint:A linked list can be reversed either iteratively or recursively. Could you implement both?</p><p>Note:</p><p>找出Node和Node.next,</p><p>定义个new next为None,</p><p>对Node和Node.next</p><p>重定向init : new next = None</p><hr /><p>old node &lt;- node</p><p>node &lt;- node.next</p><p>old node.next -&gt; new next</p><p>new next = old node</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre><td class="rouge-code"><pre>class Solution(object):
+    def reverseList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+
+        if not head: return None
+        if not head.next: return head
+        nex = head.next
+        reversenode = self.reverseList(nex)
+        nex.next = head
+        head.next = None
+        return reversenode
+</pre></table></code></div></div><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre><td class="rouge-code"><pre>class Solution(object):
+    def reverseList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        newNext = None
+        while head:
+            old = head
+            head = head.next
+            old.next = newNext
+            newNext = old
+
+        return newNext
+</pre></table></code></div></div><hr /><ol><li>Swap Nodes in Pairs</ol><p>Given a linked list, swap every two adjacent nodes and return its head.</p><p>For example,</p><p>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.</p><p>Your algorithm should use only constant space.</p><p>You may not modify the values in the list, only nodes itself can be changed.</p><p>Note: 等号左边为指针，等号右边为内存</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre><td class="rouge-code"><pre># Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def swapPairs(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        if not head or not head.next: return head
+        pre = head.next
+        head.next = self.swapPairs(head.next.next)
+        pre.next = head
+        return pre
+</pre></table></code></div></div><hr /><p>最短路径</p><p>Dijkstra’s algorithm</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre><td class="rouge-code"><pre>1  function Dijkstra(Graph, source):
+2      dist[source] ← 0                          // 初始化源点到自己的距离为0
+3
+4      create vertex set Q                       // 创建顶点集合Q
+5
+6      for each vertex v in Graph:               // 循环图中所有节点
+7          if v ≠ source                         // 排除源点
+8              dist[v] ← INFINITY                // 源点到任意v节点距离为无限大
+9              prev[v] ← UNDEFINED               // 任意v节点的前一节点为未定义
+10         Q.add_with_priority(v, dist[v])       // 将有所节点加入集合Q
+11
+12
+13
+14     while Q is not empty:                        // 循环集合Q
+15         u ← Q.extract_min()                      // 取出最小距离的节点 源点距离为0 从源点开始
+16         for each neighbor v of u:                // 循环 u 的所有临节点 v
+17             alt ← dist[u] + length(u, v)         // (source -&gt; u 的距离) +（u -&gt; v节点的距离） 
+18             if alt &lt; dist[v]                     // 两重比较：1.从上一层扩散到下一层时，比较之前定义未知节点的无限大距																											// 离，从而进入下一层 2.进入下一层后反复比较 u 到所有它的临节点 v 的																										// 距离，哪个最小 
+19                 dist[v] ← alt                    // 更新源点到节点v的距离
+20                 prev[v] ← u                      // 将u定义为v的最短路径中的前一节点
+21                 Q.decrease_priority(v, alt)      // 降低v在Q集合中的优先级
+22
+23     return dist[], prev[]
+</pre></table></code></div></div><p>98. Validate Binary Search Tree</p><p>Given a binary tree, determine if it is a valid binary search tree (BST).</p><p>Assume a BST is defined as follows:</p><p>The left subtree of a node contains only nodes with keys less than the node’s key.</p><p>The right subtree of a node contains only nodes with keys greater than the node’s key.</p><p>Both the left and right subtrees must also be binary search trees.</p><p>Example 1: 2 / \ 1 3</p><p>Binary tree [2,1,3], return true.</p><p>Example 2: 1 / \ 2 3</p><p>Binary tree [1,2,3], return false.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre><td class="rouge-code"><pre>Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+class Solution(object):
+    def isValidBST(self, root):
+        return self.isvalidBst(root, min = float('-inf'), max = float('inf'))
+</pre></table></code></div></div><p>​ <br /> def isvalidBst(self,root, min, max): if not root: return True<br /> if root.val &gt;= max or root.val &lt;= min: return false</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>        self.isvalidbst(root.left,min,root.val) and self.isvalidbst(root.right,root.val, max)
+</pre></table></code></div></div><hr /><ol><li>Valid Palindrome</ol><p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.</p><p>For example,</p><p>“A man, a plan, a canal: Panama” is a palindrome.</p><p>“race a car” is not a palindrome.</p><p>Note:</p><p>Have you consider that the string might be empty? This is a good question to ask during an interview.</p><p>For the purpose of this problem, we define empty string as valid palindrome.</p><p>判断是否字符串是否为回文</p><p>回文：句子或者单词颠倒是相同的就为回文</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre><td class="rouge-code"><pre>class Solution(object):
+    def isPalindrome(self, s):
+
+        newS = []
+
+        s = s.lower()
+        for c in s:
+            if c.isalnum():
+                newS.append(c)
+
+        return  newS == newS[::-1]
+
+class Solution(object):
+    def isPalindrome(self, s):ol
+        """
+        s = s.lower()
+        leftStep = 0
+        rightStep = len(s) - 1
+
+        while leftStep &lt; rightStep:
+            while leftStep &lt; rightStep and not s[leftStep].isalnum():
+                leftStep += 1
+            while leftStep &lt; rightStep and not s[rightStep].isalnum():
+                rightStep -= 1
+            if s[leftStep] != s[rightStep]:
+                return False
+            else:
+                leftStep += 1
+                rightStep -= 1
+        return True
+</pre></table></code></div></div><hr /><ol><li>Valid Parentheses</ol><p>Given a string containing just the characters ‘(‘, ‘)’, ‘{‘, ‘}’, ‘[‘ and ‘]’, determine if the input string is valid.</p><p>The brackets must close in the correct order, “()” and “()[]{}” are all valid but “(]” and “([)]” are not.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre><td class="rouge-code"><pre>class Solution(object):
+    def isValid(self, s):
+        stack = []
+
+        for c in s:
+            if c == '(' or c == '[' or c == '{':
+                stack.append(c)
+            elif stack == [] \
+                    or c == ')' and stack.pop() != '(' \
+                    or c == ']' and stack.pop() != '[' \
+                    or c == '}' and stack.pop() != '{':
+                return False
+        return stack == []
+</pre></table></code></div></div><hr /><ol><li>Longest Valid Parentheses</ol><p>Given a string containing just the characters ‘(‘ and ‘)’, find the length of the longest valid (well-formed) parentheses substring.</p><p>For “(()”, the longest valid parentheses substring is “()”, which has length = 2.</p><p>Another example is “)()())”, where the longest valid parentheses substring is “()()”, which has length = 4.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+</pre><td class="rouge-code"><pre>class Solution(object):
+    def longestValidParentheses(self, s):
+
+        stack = []
+        start = 0
+        longest = 0
+
+        if len(s) == 0 or not s:
+            return 0
+
+        for i ,c in enumerate(s):
+            if c == '(':
+                stack.append(i)
+            else:
+                if stack == []:        #如果字符不为“左括号”并且栈内无元素（当前值为右括号）
+                    start = i + 1      #将起始索引设置为当前右括号下一位
+                else:
+                    stack.pop()        #当前字符为右括号，栈内有元素（左括号），将栈内元素pop出来
+                    # 如果栈pop出元素后为空栈，将当前字符索引减去匹配的左括号起始索引 然后元素个数并且加一
+                    # 不为空，当前字符索引减去栈内元素的索引
+                    longest = max(longest,i - start + 1) if stack == [] else max(longest,i - stack[-1])    
+        return longest
+
+class Solution(object):
+    def longestValidParentheses(self, s):
+
+        stack = []
+        nums = []
+
+        for i in range(0, len(s)):
+            nums.append(0)
+
+        for i, c in enumerate(s):
+            if c == '(':
+                stack.append(i)
+            elif c == ')' and stack != []:
+                nums[i] = nums[stack[-1]] = 1
+                stack.pop()
+
+        longest = temp = 0
+        for i, c in enumerate(s):
+            if nums[i]:
+                temp += 1
+                longest = max(longest, temp)
+            else:
+                temp = 0
+
+        return longest
+</pre></table></code></div></div><p>141.Linked list Cycle</p><p>Given a linked list, determine if it has a cycle in it.</p><p>Follow up:<br /> Can you solve it without using extra space?</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre><td class="rouge-code"><pre>class Solution(object):
+    def hasCycle(self, head):
+
+        if not head: return False
+
+        slow = head
+        fast = head
+
+        while fast.next and fast.next.next:
+            slow = slow.next
+            fast = fast.next.next
+            if fast is slow:
+                return True
+        return False
+</pre></table></code></div></div><hr /><p>141.Linked list Cycle II</p><p>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.</p><p>Note: Do not modify the linked list.</p><p>Follow up:</p><p>Can you solve it without using extra space?</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre><td class="rouge-code"><pre>class Solution(object):
+    def detectCycle(self, head):
+
+        if not head: return None
+
+        slow = head
+        fast = head
+
+        while fast.next and fast.next.next:
+            slow = slow.next
+            fast = fast.next.next
+            if fast is slow:
+                while head is not slow:
+                    slow = slow.next
+                    head = head.next
+                return head
+
+        return None
+</pre></table></code></div></div><hr /><p>FindNumber</p><p>在二维数组中查找一个数字是否存在</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre><td class="rouge-code"><pre>class Solution:
+    def Find(self, target, array):
+
+        rowIndex = 0
+        lineIndex = len(array[0]) - 1
+
+        while lineIndex &gt;= 0 and \
+                        rowIndex &lt;= len(array) - 1: if target="=" array[rowindex][lineindex]: return true elif&gt; array[rowIndex][lineIndex]:
+                rowIndex += 1
+            elif target &lt; array[rowIndex][lineIndex]:
+                lineIndex -= 1
+        return False
+</pre></table></code></div></div><hr /><p>RebuildTree</p><p>给予你两个前序遍历和中序遍历后的数组，重新生成树</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+</pre><td class="rouge-code"><pre>class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+class Solution:
+    def reConstructBinaryTree(self, pre, tin):
+
+        if not pre and not tin:
+            return None
+        root = TreeNode(pre[0])
+
+        #根节点在中序遍历数组中的索引位置
+        root_pos_in_order = tin.index(root.val)
+
+        # &lt;:左子树元素&gt;:右子树元素
+        # 前序遍历
+        # [root,&lt;,&lt;,&lt;,&lt;,&lt;,&gt;,&gt;,&gt;,&gt;]
+        # 中序遍历
+        # [&lt;,&lt;,&lt;,&lt;,&lt;,root,&gt;,&gt;,&gt;,&gt;]
+
+        #左子树节点个数  在中序遍历后的数组中，左子树节点元素在根节点的左侧
+        # 因此左子树的节点个数为 中序遍历后数组中根节点的索引下标值
+        #  1 2 3 4 5 6    7 8 9 10 节点个数
+        #  0 1 2 3 4 5    6 7 8 9  数组下标索引
+        left_length = root_pos_in_order
+
+        right_length = len(tin) - (left_length + 1) #(左子树节点个数 + 根节点)
+
+        # pre[1:root_pos_in_order] 为前序遍历结果中 当前节点的左子树范围
+        # tin[:root_pos_in_order - 1] 为中序遍历结果中 当前节点的左子树范围
+        #  为确定下一层 节点 区分其 左 右 子树范围提供索引 而传递使用
+        if left_length &gt; 0:
+            root.left = self.reConstructBinaryTree(pre[1:root_pos_in_order + 1],tin[:root_pos_in_order])
+
+        # pre[root_pos_in_order + 1:] 为前序遍历结果中 当前点的右子树范围
+        # tin[:root_pos_in_order - 1] 为中序遍历结果中 当前节点的右子树范围
+        #  为确定下一层 节点 区分其 左 右 子树范围提供索引 而传递使用
+        if right_length &gt; 0:
+            root.right = self.reConstructBinaryTree(pre[root_pos_in_order + 1:],tin[root_pos_in_order + 1:])
+
+        return root
+</pre></table></code></div></div></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/haifuyun.github.io/categories/data-struct/'>Data Struct</a>, <a href='/haifuyun.github.io/categories/leetcode/'>LeetCode</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/haifuyun.github.io/tags/data-struct/" class="post-tag no-text-decoration" >Data Struct</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=Leet Code Problem - Hi!FuYun&url=https://hifuyun.com/haifuyun.github.io/posts/Leet-Code-Problem/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=Leet Code Problem - Hi!FuYun&u=https://hifuyun.com/haifuyun.github.io/posts/Leet-Code-Problem/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=Leet Code Problem - Hi!FuYun&url=https://hifuyun.com/haifuyun.github.io/posts/Leet-Code-Problem/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/haifuyun.github.io/posts/Computer-Graphics-Visibility/">Computer Graphics Visibility</a><li><a href="/haifuyun.github.io/posts/Computer-Graphics-Shading/">Computer Graphics Shading</a><li><a href="/haifuyun.github.io/posts/Computer-Graphics-ShadingTexture/">Computer Graphics Shading Texture</a><li><a href="/haifuyun.github.io/posts/Computer-Graphics-Transformation/">Computer Graphics Transformation</a><li><a href="/haifuyun.github.io/posts/Computer-Graphics-Viewing-transformation/">Computer Graphics Viewing transformation</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/haifuyun.github.io/tags/graphics/">Graphics</a> <a class="post-tag" href="/haifuyun.github.io/tags/data-struct/">Data Struct</a> <a class="post-tag" href="/haifuyun.github.io/tags/ios/">iOS</a> <a class="post-tag" href="/haifuyun.github.io/tags/python/">Python</a></div></div></div><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/haifuyun.github.io/posts/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"><div class="card-body"> <span class="timeago small" > Apr 16, 2017 <i class="unloaded">2017-04-16T00:00:00+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>算法时间空间复杂度</h3><div class="text-muted small"><p> 算法时间空间复杂度 原文资料：CMU 15-112: Fundamentals of Programming and Computer Science Class Notes: Efficiency 1.Big-Oh video 1.描述函数的渐进行为 2.非正式解释 (for 15112): 忽略所有低阶项和常量级 3.正式解释 (after 15112): 维基百科 ...</p></div></div></a></div><div class="card"> <a href="/haifuyun.github.io/posts/Computer-Graphics-FlowMap/"><div class="card-body"> <span class="timeago small" > Jul 11 <i class="unloaded">2021-07-11T00:00:00+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Computer Graphics FlowMap</h3><div class="text-muted small"><p> Flow map如字面意思，会流动的贴图，原理是采用两张贴图，一张展示底图，一张提供位置数据(Red、Green通道映射x、y位置)让底图采样得到位置数据叠加时间后产生位移效果，表现为流动效果 提供位移数据的贴图分为RGBA四个通道，我们绘制RG两个通道，让他们分布在我们想要改变的位置坐标上 底图 叠加效果 代码 1 2 3 float4 f = tex2D(flowM...</p></div></div></a></div><div class="card"> <a href="/haifuyun.github.io/posts/%E9%80%8F%E6%98%8E%E7%89%A9%E4%BD%93%E7%9A%84%E7%BB%98%E5%88%B6/"><div class="card-body"> <span class="timeago small" > Jul 10 <i class="unloaded">2021-07-10T00:00:00+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>透明物体的绘制 - 混合与深度测试</h3><div class="text-muted small"><p> 透明物体的绘制 - 混合与深度测试 当场景出现透明和不透明物体有前后遮挡关系时，我们要让透明物体透过自身能看到后面的不透明物体时，就需要混合两者的颜色，混合公式: 混合源颜色与目标颜色 Blend SrcFactor DstFactor SrcFactor 当前渲染的物体源颜色alpha值 DstFactor 屏幕已渲染的像素底色alpha值 混合公式，这里的目标颜色al...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/haifuyun.github.io/posts/Xamarin-%E7%BB%91%E5%AE%9AiOS%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" class="btn btn-outline-primary" prompt="Older"><p>Xamarin 绑定iOS第三方库</p></a> <a href="/haifuyun.github.io/posts/Python-%E8%AF%AD%E6%B3%95/" class="btn btn-outline-primary" prompt="Newer"><p>Python 语法</p></a></div></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2021 <a href="https://twitter.com/haifuyun">haifuyun</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme.</p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/haifuyun.github.io/tags/graphics/">Graphics</a> <a class="post-tag" href="/haifuyun.github.io/tags/data-struct/">Data Struct</a> <a class="post-tag" href="/haifuyun.github.io/tags/ios/">iOS</a> <a class="post-tag" href="/haifuyun.github.io/tags/python/">Python</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/haifuyun.github.io/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="https://hifuyun.com{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script>
